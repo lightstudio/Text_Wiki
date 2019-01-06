@@ -12,7 +12,7 @@
 * 
 * @license LGPL
 * 
-* @version $Id$
+* @version $Id: Revise.php 180591 2005-02-23 17:38:29Z pmjones $
 * 
 */
 
@@ -28,7 +28,7 @@
 * 
 */
 
-class Text_Wiki_Parse_Default_Revise extends Text_Wiki_Parse {
+class Text_Wiki_Parse_Revise extends Text_Wiki_Parse {
     
     
     /**

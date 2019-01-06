@@ -14,7 +14,7 @@
 * 
 * @license LGPL
 * 
-* @version $Id$
+* @version $Id: Anchor.php 180591 2005-02-23 17:38:29Z pmjones $
 * 
 */
 
@@ -33,7 +33,7 @@
 * 
 */
 
-class Text_Wiki_Parse_Default_Anchor extends Text_Wiki_Parse {
+class Text_Wiki_Parse_Anchor extends Text_Wiki_Parse {
     
     
     /**
@@ -84,3 +84,4 @@ class Text_Wiki_Parse_Default_Anchor extends Text_Wiki_Parse {
         return $start . trim($text) . $end;
     }
 }
+?>

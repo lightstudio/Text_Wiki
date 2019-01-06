@@ -9,7 +9,7 @@
  * @package    Text_Wiki
  * @author     Paul M. Jones <pmjones@php.net>
  * @license    http://www.gnu.org/copyleft/lesser.html  LGPL License 2.1
- * @version    CVS: $Id$
+ * @version    CVS: $Id: Render.php 209118 2006-03-11 07:12:13Z justinpatrin $
  * @link       http://pear.php.net/package/Text_Wiki
  */
 
@@ -90,7 +90,7 @@ class Text_Wiki_Render {
     *
     */
 
-    function __construct(&$obj)
+    function Text_Wiki_Render(&$obj)
     {
         // keep a reference to the calling Text_Wiki object
         $this->wiki =& $obj;
@@ -133,22 +133,6 @@ class Text_Wiki_Render {
                 $this->wiki->renderConf[$this->format][$this->rule]
             );
         }
-    }
-
-
-    /**
-    *
-    * Constructor for this render format or rule.
-    *
-    * @access public
-    *
-    * @param object &$obj The calling "parent" Text_Wiki object.
-    *
-    */
-
-    function Text_Wiki_Render(&$obj)
-    {
-        $this->__construct($obj);
     }
 
 

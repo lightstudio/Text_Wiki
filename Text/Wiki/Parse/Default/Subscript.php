@@ -12,7 +12,7 @@
 * 
 * @license LGPL
 * 
-* @version $Id$
+* @version $Id: Subscript.php 180691 2005-02-24 17:24:56Z pmjones $
 * 
 */
 
@@ -28,7 +28,7 @@
 * 
 */
 
-class Text_Wiki_Parse_Default_Subscript extends Text_Wiki_Parse {
+class Text_Wiki_Parse_Subscript extends Text_Wiki_Parse {
     
     
     /**

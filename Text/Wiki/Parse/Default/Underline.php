@@ -12,7 +12,7 @@
 * 
 * @license LGPL
 * 
-* @version $Id$
+* @version $Id: Underline.php 190446 2005-07-10 20:40:20Z justinpatrin $
 * 
 */
 
@@ -34,7 +34,7 @@
 * 
 */
 
-class Text_Wiki_Parse_Default_Underline extends Text_Wiki_Parse {
+class Text_Wiki_Parse_Underline extends Text_Wiki_Parse {
     
     
     /**

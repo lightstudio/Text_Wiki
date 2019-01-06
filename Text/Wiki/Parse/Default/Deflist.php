@@ -12,7 +12,7 @@
 * 
 * @license LGPL
 * 
-* @version $Id$
+* @version $Id: Deflist.php 180591 2005-02-23 17:38:29Z pmjones $
 * 
 */
 
@@ -20,7 +20,7 @@
 * 
 * Parses for definition lists.
 * 
-* This class implements a Text_Wiki_Parse_Default to find source text marked as a
+* This class implements a Text_Wiki_Parse to find source text marked as a
 * definition list.  In short, if a line starts with ':' then it is a
 * definition list item; another ':' on the same line indicates the end
 * of the definition term and the beginning of the definition narrative.
@@ -35,7 +35,7 @@
 * 
 */
 
-class Text_Wiki_Parse_Default_Deflist extends Text_Wiki_Parse {
+class Text_Wiki_Parse_Deflist extends Text_Wiki_Parse {
     
     
     /**
@@ -119,3 +119,4 @@ class Text_Wiki_Parse_Default_Deflist extends Text_Wiki_Parse {
         return "\n" . $return . "\n\n";
     }
 }
+?>

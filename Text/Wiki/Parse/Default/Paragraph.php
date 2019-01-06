@@ -12,7 +12,7 @@
 * 
 * @license LGPL
 * 
-* @version $Id$
+* @version $Id: Paragraph.php 286814 2009-08-04 17:03:17Z rodrigosprimo $
 * 
 */
 
@@ -32,7 +32,7 @@
 * 
 */
 
-class Text_Wiki_Parse_Default_Paragraph extends Text_Wiki_Parse {
+class Text_Wiki_Parse_Paragraph extends Text_Wiki_Parse {
     
     /**
     * 

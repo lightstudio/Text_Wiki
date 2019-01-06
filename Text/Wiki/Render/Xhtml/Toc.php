@@ -9,7 +9,7 @@
  * @package    Text_Wiki
  * @author     Paul M. Jones <pmjones@php.net>
  * @license    http://www.gnu.org/copyleft/lesser.html  LGPL License 2.1
- * @version    CVS: $Id$
+ * @version    CVS: $Id: Toc.php 191862 2005-07-30 08:03:29Z toggg $
  * @link       http://pear.php.net/package/Text_Wiki
  */
 
@@ -30,7 +30,6 @@ class Text_Wiki_Render_Xhtml_Toc extends Text_Wiki_Render {
         'css_item' => null,
         'title' => '<strong>Table of Contents</strong>',
         'div_id' => 'toc',
-        'base_url' => '',
         'collapse' => true
     );
 
@@ -103,7 +102,7 @@ class Text_Wiki_Render_Xhtml_Toc extends Text_Wiki_Render {
             $pad = ($level - $this->min);
             $html .= " style=\"margin-left: {$pad}em;\">";
 
-            $html .= '<a href="' . $this->getConf('base_url') . '#' . $id . '">';
+            $html .= "<a href=\"#$id\">";
             return $html;
             break;
 

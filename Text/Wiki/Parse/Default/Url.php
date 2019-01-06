@@ -12,7 +12,7 @@
 * 
 * @license LGPL
 * 
-* @version $Id$
+* @version $Id: Url.php 293784 2010-01-20 18:48:09Z justinpatrin $
 * 
 */
 
@@ -49,7 +49,7 @@
 * 
 */
 
-class Text_Wiki_Parse_Default_Url extends Text_Wiki_Parse {
+class Text_Wiki_Parse_Url extends Text_Wiki_Parse {
     
     
     /**
@@ -97,9 +97,9 @@ class Text_Wiki_Parse_Default_Url extends Text_Wiki_Parse {
     * 
     */
     
-    function __construct(&$obj)
+    function Text_Wiki_Parse_Url(&$obj)
     {
-        parent::__construct($obj);
+        parent::Text_Wiki_Parse($obj);
         
         // convert the list of recognized schemes to a regex-safe string,
         // where the pattern delim is a slash
@@ -118,21 +118,6 @@ class Text_Wiki_Parse_Default_Url extends Text_Wiki_Parse {
             ")*" . // end pattern
             "[^ \\t\\n\\/\"\'{$this->wiki->delim}]*" .
             "[A-Za-z0-9\\/?=&~_#]";
-    }
-
-    /**
-    * 
-    * Constructor.
-    * 
-    * We override the constructor so we can comment the regex nicely.
-    * 
-    * @access public
-    * 
-    */
-    
-    function Text_Wiki_Parse_Default_Url(&$obj)
-    {
-        $this->__construct($obj);
     }
     
     

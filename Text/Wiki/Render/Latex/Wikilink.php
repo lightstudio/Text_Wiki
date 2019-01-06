@@ -1,9 +1,6 @@
 <?php
 
-require_once 'Text/Wiki/Render.php';
-
-class Text_Wiki_Render_Latex_Wikilink extends Text_Wiki_Render
-{
+class Text_Wiki_Render_Latex_Wikilink extends Text_Wiki_Render {
     var $conf = array(
         'pages' => array(),
         'view_url' => 'http://example.com/index.php?page=%s',

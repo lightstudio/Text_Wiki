@@ -12,7 +12,7 @@
 *
 * @license LGPL
 *
-* @version $Id$
+* @version $Id: Image.php 195859 2005-09-12 11:34:44Z toggg $
 *
 */
 
@@ -28,7 +28,7 @@
 *
 */
 
-class Text_Wiki_Parse_Default_Image extends Text_Wiki_Parse {
+class Text_Wiki_Parse_Image extends Text_Wiki_Parse {
 
     /**
      * URL schemes recognized by this rule.
@@ -73,10 +73,10 @@ class Text_Wiki_Parse_Default_Image extends Text_Wiki_Parse {
      * @return The parser object
      * @access public
      */
-    function __construct(&$obj)
+    function Text_Wiki_Parse_Image(&$obj)
     {
         $default = $this->conf;
-        parent::__construct($obj);
+        parent::Text_Wiki_Parse($obj);
 
         // convert the list of recognized schemes to a regex OR,
         $schemes = $this->getConf('schemes', $default['schemes']);
@@ -84,19 +84,6 @@ class Text_Wiki_Parse_Default_Image extends Text_Wiki_Parse {
            '#(?:' . (is_array($schemes) ? implode('|', $schemes) : $schemes) . ')://'
            . $this->getConf('host_regexp', $default['host_regexp'])
            . $this->getConf('path_regexp', $default['path_regexp']) .'#');
-    }
-
-    /**
-     * Constructor.
-     * We override the constructor to build up the url regex from config
-     *
-     * @param object &$obj the base conversion handler
-     * @return The parser object
-     * @access public
-     */
-    function Text_Wiki_Parse_Default_Image(&$obj)
-    {
-        $this->__construct($obj);
     }
 
     /**
@@ -146,3 +133,4 @@ class Text_Wiki_Parse_Default_Image extends Text_Wiki_Parse {
         return $this->wiki->addToken($this->rule, $options);
     }
 }
+?>

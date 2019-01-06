@@ -1,7 +1,7 @@
 <?php
 // vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4:
 /**
- * This class implements a Text_Wiki_Render_Plain to "pre-filter" source text so
+ * This class implements a Text_Wiki_Render_Xhtml to "pre-filter" source text so
  * that line endings are consistently \n, lines ending in a backslash \
  * are concatenated with the next line, and tabs are converted to spaces.
  *
@@ -11,7 +11,7 @@
  * @package    Text_Wiki
  * @author     Paul M. Jones <pmjones@php.net>
  * @license    http://www.gnu.org/copyleft/lesser.html  LGPL License 2.1
- * @version    CVS: $Id$
+ * @version    CVS: $Id: Prefilter.php 248435 2007-12-17 16:19:44Z justinpatrin $
  * @link       http://pear.php.net/package/Text_Wiki
  */
 

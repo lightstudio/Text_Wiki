@@ -12,7 +12,7 @@
 * 
 * @license LGPL
 * 
-* @version $Id$
+* @version $Id: Freelink.php 224598 2006-12-08 08:23:51Z justinpatrin $
 * 
 */
 
@@ -20,7 +20,7 @@
 * 
 * Parses for freelinked page links.
 * 
-* This class implements a Text_Wiki_Parse_Default to find source text marked as a
+* This class implements a Text_Wiki_Parse to find source text marked as a
 * wiki freelink, and automatically create a link to that page.
 * 
 * A freelink is any page name not conforming to the standard
@@ -39,7 +39,7 @@
 * 
 */
 
-class Text_Wiki_Parse_Default_Freelink extends Text_Wiki_Parse {
+class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse {
     
     var $conf = array (
                        'utf-8' => false
@@ -47,7 +47,7 @@ class Text_Wiki_Parse_Default_Freelink extends Text_Wiki_Parse {
     
     /**
     * 
-    * Constructor.  We override the Text_Wiki_Parse_Default constructor so we can
+    * Constructor.  We override the Text_Wiki_Parse constructor so we can
     * explicitly comment each part of the $regex property.
     * 
     * @access public
@@ -56,9 +56,9 @@ class Text_Wiki_Parse_Default_Freelink extends Text_Wiki_Parse {
     * 
     */
     
-    function __construct(&$obj)
+    function Text_Wiki_Parse_Freelink(&$obj)
     {
-        parent::__construct($obj);
+        parent::Text_Wiki_Parse($obj);
         if ($this->getConf('utf-8')) {
             $any = '\p{L}';
         } else {
@@ -81,22 +81,6 @@ class Text_Wiki_Parse_Default_Freelink extends Text_Wiki_Parse {
             ")?" .                                                   // END named anchors pattern 0 or 1
             "()\\)\\)" .                                           // double close-parens
             '/'.($this->getConf('utf-8') ? 'u' : '');              // END regex
-    }
-
-    /**
-    * 
-    * Constructor.  We override the Text_Wiki_Parse_Default constructor so we can
-    * explicitly comment each part of the $regex property.
-    * 
-    * @access public
-    * 
-    * @param object &$obj The calling "parent" Text_Wiki object.
-    * 
-    */
-    
-    function Text_Wiki_Parse_Default_Freelink(&$obj)
-    {
-        $this->__construct($obj);
     }
     
     

@@ -14,7 +14,7 @@
  * @author     Bertrand Gugger <bertrand@toggg.com>
  * @copyright  2005 bertrand Gugger
  * @license    http://www.gnu.org/copyleft/lesser.html  LGPL License 2.1
- * @version    CVS: $Id$
+ * @version    CVS: $Id: Smiley.php 197527 2005-10-04 08:17:51Z toggg $
  * @link       http://pear.php.net/package/Text_Wiki
  */
 
@@ -28,9 +28,9 @@
  * @license    http://www.gnu.org/copyleft/lesser.html  LGPL License 2.1
  * @version    Release: @package_version@
  * @link       http://pear.php.net/package/Text_Wiki
- * @see        Text_Wiki_Parse_Default::Text_Wiki_Parse_Default()
+ * @see        Text_Wiki_Parse::Text_Wiki_Parse()
  */
-class Text_Wiki_Parse_Default_Smiley extends Text_Wiki_Parse {
+class Text_Wiki_Parse_Smiley extends Text_Wiki_Parse {
 
     /**
      * Configuration keys for this rule
@@ -91,10 +91,10 @@ class Text_Wiki_Parse_Default_Smiley extends Text_Wiki_Parse {
      * @return The parser object
      * @access public
      */
-    function __construct(&$obj)
+    function Text_Wiki_Parse_Smiley(&$obj)
     {
         $default = $this->conf;
-        parent::__construct($obj);
+        parent::Text_Wiki_Parse($obj);
 
         // read the list of smileys to sort out variantes and :xxx: while building the regexp
         $this->_smileys = $this->getConf('smileys', $default['smileys']);
@@ -131,19 +131,6 @@ class Text_Wiki_Parse_Default_Smiley extends Text_Wiki_Parse {
         $this->regex = '#(?<=' . $delim .
              ')(' . ($reg1 ? $reg1 . '):' . ($reg2 ? '|' : '') : '') . $reg2 .
              ')(?=' . $delim . ')#i';
-    }
-
-    /**
-     * Constructor.
-     * We override the constructor to build up the regex from config
-     *
-     * @param object &$obj the base conversion handler
-     * @return The parser object
-     * @access public
-     */
-    function Text_Wiki_Parse_Default_Smiley(&$obj)
-    {
-        $this->__construct($obj);
     }
 
     /**

@@ -12,7 +12,7 @@
 *
 * @license LGPL
 *
-* @version $Id$
+* @version $Id: Wikilink.php 224598 2006-12-08 08:23:51Z justinpatrin $
 *
 */
 
@@ -42,7 +42,7 @@
 *
 */
 
-class Text_Wiki_Parse_Default_Wikilink extends Text_Wiki_Parse {
+class Text_Wiki_Parse_Wikilink extends Text_Wiki_Parse {
 
     var $conf = array (
                        'ext_chars' => false,
@@ -53,7 +53,7 @@ class Text_Wiki_Parse_Default_Wikilink extends Text_Wiki_Parse {
     *
     * Constructor.
     *
-    * We override the Text_Wiki_Parse_Default constructor so we can
+    * We override the Text_Wiki_Parse constructor so we can
     * explicitly comment each part of the $regex property.
     *
     * @access public
@@ -62,9 +62,9 @@ class Text_Wiki_Parse_Default_Wikilink extends Text_Wiki_Parse {
     *
     */
 
-    function __construct(&$obj)
+    function Text_Wiki_Parse_Wikilink(&$obj)
     {
-        parent::__construct($obj);
+        parent::Text_Wiki_Parse($obj);
 
         if ($this->getConf('utf-8')) {
 			$upper = 'A-Z\p{Lu}';
@@ -100,24 +100,6 @@ class Text_Wiki_Parse_Default_Wikilink extends Text_Wiki_Parse {
             "[-_$either:.]*" . // 0+ dash, alpha, digit, underscore, colon, dot
             "[-_$either]" .    // 1 dash, alpha, digit, or underscore
             ")?)?)";           // end subpatterns (/4)(/3)(/2)
-    }
-
-    /**
-    *
-    * Constructor.
-    *
-    * We override the Text_Wiki_Parse_Default constructor so we can
-    * explicitly comment each part of the $regex property.
-    *
-    * @access public
-    *
-    * @param object &$obj The calling "parent" Text_Wiki object.
-    *
-    */
-
-    function Text_Wiki_Parse_Default_Wikilink(&$obj)
-    {
-        $this->__construct($obj);
     }
 
 

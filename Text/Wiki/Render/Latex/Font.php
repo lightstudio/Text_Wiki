@@ -10,7 +10,7 @@
  * @author     Bertrand Gugger <bertrand@toggg.com>
  * @copyright  2005 bertrand Gugger
  * @license    http://www.gnu.org/copyleft/lesser.html  LGPL License 2.1
- * @version    CVS: $Id$
+ * @version    CVS: $Id: Font.php 209123 2006-03-11 11:14:23Z toggg $
  * @link       http://pear.php.net/package/Text_Wiki
  */
 

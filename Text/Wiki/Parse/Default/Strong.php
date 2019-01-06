@@ -12,7 +12,7 @@
 * 
 * @license LGPL
 * 
-* @version $Id$
+* @version $Id: Strong.php 180591 2005-02-23 17:38:29Z pmjones $
 * 
 */
 
@@ -21,7 +21,7 @@
 * 
 * Parses for strongly-emphasized text.
 * 
-* This class implements a Text_Wiki_Parse_Default to find source text marked for
+* This class implements a Text_Wiki_Parse to find source text marked for
 * strong emphasis (bold) as defined by text surrounded by three
 * single-quotes. On parsing, the text itself is left in place, but the
 * starting and ending instances of three single-quotes are replaced with
@@ -35,7 +35,7 @@
 * 
 */
 
-class Text_Wiki_Parse_Default_Strong extends Text_Wiki_Parse {
+class Text_Wiki_Parse_Strong extends Text_Wiki_Parse {
     
     
     /**

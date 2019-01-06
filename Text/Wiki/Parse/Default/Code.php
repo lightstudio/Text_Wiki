@@ -12,7 +12,7 @@
 * 
 * @license LGPL
 * 
-* @version $Id$
+* @version $Id: Code.php 237313 2007-06-09 23:11:25Z justinpatrin $
 * 
 */
 
@@ -20,7 +20,7 @@
 * 
 * Parses for text marked as a code example block.
 * 
-* This class implements a Text_Wiki_Parse_Default to find sections marked as code
+* This class implements a Text_Wiki_Parse to find sections marked as code
 * examples.  Blocks are marked as the string <code> on a line by itself,
 * followed by the inline code example, and terminated with the string
 * </code> on a line by itself.  The code example is run through the
@@ -35,7 +35,7 @@
 * 
 */
 
-class Text_Wiki_Parse_Default_Code extends Text_Wiki_Parse {
+class Text_Wiki_Parse_Code extends Text_Wiki_Parse {
     
     
     /**
@@ -49,9 +49,8 @@ class Text_Wiki_Parse_Default_Code extends Text_Wiki_Parse {
     * 
     */
     
-    /* var $regex = '/^(\<code( .+)?\>)\n(.+)\n(\<\/code\>)(\s|$)/Umsi'; */
-    /* var $regex = ';^<code(\s[^>]*)?>((?:(?R)|.*?)*)\n</code>(\s|$);msi'; */
-    var $regex = ';^<code(\s[^>]*)?>(.*?)\n</code>(\s|$);msi';
+/*    var $regex = '/^(\<code( .+)?\>)\n(.+)\n(\<\/code\>)(\s|$)/Umsi';*/
+    var $regex = ';^<code(\s[^>]*)?>((?:(?R)|.*?)*)\n</code>(\s|$);msi';
     
     /**
     * 
@@ -97,3 +96,4 @@ class Text_Wiki_Parse_Default_Code extends Text_Wiki_Parse {
         return $this->wiki->addToken($this->rule, $options) . $matches[3];
     }
 }
+?>

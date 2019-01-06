@@ -9,7 +9,7 @@
  * @package    Text_Wiki
  * @author     Paul M. Jones <pmjones@php.net>
  * @license    http://www.gnu.org/copyleft/lesser.html  LGPL License 2.1
- * @version    CVS: $Id$
+ * @version    CVS: $Id: Break.php 191862 2005-07-30 08:03:29Z toggg $
  * @link       http://pear.php.net/package/Text_Wiki
  */
 

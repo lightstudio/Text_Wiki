@@ -9,7 +9,7 @@
  * @package    Text_Wiki
  * @author     Paul M. Jones <pmjones@php.net>
  * @license    http://www.gnu.org/copyleft/lesser.html  LGPL License 2.1
- * @version    CVS: $Id$
+ * @version    CVS: $Id: Blockquote.php 236408 2007-05-26 18:25:45Z mic $
  * @link       http://pear.php.net/package/Text_Wiki
  */
 
@@ -60,12 +60,12 @@ class Text_Wiki_Render_Xhtml_Blockquote extends Text_Wiki_Render {
         }
         // starting
         if ($type == 'start') {
-            return "\n$pad<blockquote$css><div>\n$pad    ";
+            return "$pad<blockquote$css>";
         }
 
         // ending
         if ($type == 'end') {
-            return "\n$pad</div></blockquote>";
+            return $pad . "</blockquote>\n";
         }
     }
 }
